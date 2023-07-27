@@ -42,7 +42,6 @@ export default function App() {
       axios.get(`${BASE_URL}/friends?api_key=${API_KEY}`)
         .then((res) => {
           setFriends(res.data)
-          console.log(res.data)
         })
         .catch((e) => {
           console.error(e)
@@ -56,7 +55,7 @@ export default function App() {
       {/* start by mapping over the friends array...*/}
       {
         friends.map(fr=> {
-          return <Friend key = {fr.id} info = {fr} />
+          return <Friend key = {fr.id} info = {fr} openDetails = {openDetails} />
         })
       }
       {
