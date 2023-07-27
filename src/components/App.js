@@ -18,7 +18,7 @@ export default function App() {
   const closeDetails = () => {
     setCurrentFriendId(null)
   }
-  console.log('this will render before any effect does')
+
   // 👉 TASK 3 - make an effect that runs after FIRST DOM surgery
   // caused by the first render only. You'll need `useEffect` from React.
   // The effect should consist of a call to the API using axios.
